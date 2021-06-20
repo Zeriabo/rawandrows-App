@@ -1,19 +1,11 @@
 
 import './App.css';
 import './Components/Header'
+import "bootstrap/dist/css/bootstrap.css";
+import Layout from './Components/Layout';
 function App() {
   return (
-    <header />  ,
-    
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-          get list of rows <a href="http://localhost:5000/getlistofrows">Get rows</a>
-        </p>
-       
-      </header>
-    </div>
+    <Layout />
   );
 }
 

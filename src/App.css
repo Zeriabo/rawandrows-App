@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -6,7 +7,19 @@
   height: 40vmin;
   pointer-events: none;
 }
+.navbar{
+  background-color:steelblue
+}
+.nav-item{
+  font-size:medium;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight:bold;
+  font-style: italic;
+  font-display:initial;
+  font-display:inherit;
 
+
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -23,7 +36,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.text-uppercase{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .App-link {
   color: #61dafb;
 }
