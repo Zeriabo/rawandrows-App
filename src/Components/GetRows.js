@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 
 
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 export class GetRows extends Component {  
     loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>  
   
