@@ -1,5 +1,5 @@
 import React, { Component } from 'react'  
-import ReactDOM from 'react-dom';
+
 import { Carousel } from 'react-responsive-carousel';
 
 import {
@@ -8,9 +8,7 @@ import {
   MDBCarouselItem,
   MDBContainer,
   MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBBox
+  MDBCol
 } from 'mdbreact';
 
 
