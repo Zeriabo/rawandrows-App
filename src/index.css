@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container .btn:hover {
+  background-color:aqua;
+}
+.container .btn {
+  height: 3em;
+  width: 20%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    transition-duration: 0.4s;
+    display:flex; 
+    color: black;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    border: 2px solid green;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 1em;
+    display: block;
+    font-weight: bold;
+
+
+    
+    
+    
+}
+.Footer{
+  position: relative;
+  margin: auto 0;
+left:0;
+bottom:0;
+right:0;
+height: 0; 
+bottom:100%
+
+
+
+
+}
+.gfg {
+  margin: 3%;
+  position: relative;
+}
+
+.first-txt {
+  position: absolute;
+  top: 400px;
+  left: 500px;
+  color:cornflowerblue
+}
+
+.second-txt {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+.navbar a {
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+}
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+position: relative;
+width: 100%;
+}
+
+.each-fade > div {
+
+  align-items: center;
+  justify-content: center;
+width:auto;
+  height: 500px;
+}
+
+.diviSlide{
+  width: auto;
+  height:auto
+  
+}
+.carousel {
+  width:900px;
+  height:400px;
+  margin: auto;
+  overflow: hidden;
+}
+.translate-enter {
+  transform: translateX(100vw);
+}
+
+.translate-enter.translate-enter-active {
+  transform: translateX(0);
+  transition: all 500ms ease-in-out;
+}
+
+.translate-leave {
+    transform: translateX(0);
+}
+
+.translate-leave.translate-leave-active {
+    transform: translateX(-100vw);
+  transition: all 500ms ease-in-out;
+}
+
+.scale-appear, .blur-appear, .rotate-appear, .translate-appear{
+  filter: grayscale(100%);
+  transition: all 1000ms ease-in-out;
+}
+
+.scale-appear.scale-appear-active, .blur-appear.blur-appear-active, .rotate-appear.rotate-appear-active, .translate-appear.translate-appear-active{
+  filter: grayscale(0);
+}
+.scale-enter {
+  transform: scale(1);
+}
+
+.scale-enter.scale-enter-active {
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+
+.scale-leave {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.scale-leave.scale-leave-active {
+    transform: scale(1.2);
+  opacity: .01;
+  transition: all 500ms ease-in-out;
+}
+
+.blur-enter {
+  transform: scale(1);
+}
+
+.blur-enter.blur-enter-active {
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+
+.blur-leave {
+    transform: scale(1);
+  opacity: 1;
+}
+
+.blur-leave.blur-leave-active {
+  filter: blur(40px);
+  opacity: .01;
+  transition: all 500ms ease-in-out;
+}
+
+.rotate-enter {
+  filter: hue-rotate(-180deg);
+  opacity: .01;
+}
+
+.rotate-enter.rotate-enter-active {
+    filter: hue-rotate(0deg);
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.rotate-leave {
+      filter: hue-rotate(0deg);
+  opacity: 1;
+}
+
+.rotate-leave.rotate-leave-active {
+  filter: hue-rotate(180deg);
+  opacity: .01;
+  transition: all 500ms ease-in-out;
+}
+.brand {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  float: none;
+}
+.navbar{
+ background-color:transparent;
+ background-color: #00BFFF;
+ top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
