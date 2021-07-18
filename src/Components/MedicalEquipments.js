@@ -1,7 +1,7 @@
 
     import React, { Component } from 'react';  
     import { Slide } from 'react-slideshow-image';
-  import Map from './MyMap'
+
     const slideImages = [
         'images/medical/1.jpg',
         'images/medical/2.jpg',

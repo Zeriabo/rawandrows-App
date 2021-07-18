@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
-import Footer from './Footer';
+
 
 const mapStyles = {
   margin: '10px',

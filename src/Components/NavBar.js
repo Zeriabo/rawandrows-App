@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/aria-proptypes */
 import React from 'react';
 import * as ReactBootStrap from "react-bootstrap";
 import {
-    BrowserRouter as Router,
+  
     Link
   } from "react-router-dom";
 
@@ -18,6 +19,7 @@ const NavBar = () => {
       style={{ maxHeight: '500px' }}  
       navbarScroll> 
     <Link to="/Home">
+
     <ReactBootStrap.Nav.Link href="#Home" aria-activedescendant><p style={{fontfamily:'Courier New'}}>Home</p></ReactBootStrap.Nav.Link>
     </Link>
   

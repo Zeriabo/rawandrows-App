@@ -11,17 +11,18 @@ import Footer from './Components/Footer';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
+ 
 } from "react-router-dom";
 function App() {
   return (
     <div className="App">
  <Router>
+   
         <NavBar />
         <br />
         <Switch>
-          
+        <Route exact path='/' component={Home} />
         <Route path="/Home" component={Home}>
 
            <Home />
