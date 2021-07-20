@@ -7,8 +7,10 @@
       
         render() {  
             return ( 
+             
     
               <div>
+                
                 <p style={{fontSize: 40 + 'px'}}>Address Map:</p>
                  <MapContainer />
     
