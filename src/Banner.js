@@ -112,13 +112,13 @@ class Banner extends React.Component {
             }}
           />
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-          <img src={process.env.PUBLIC_URL + '/images/62.jpg'}/> 
+          <img src={process.env.PUBLIC_URL + '/images/62.jpg'}     alt=""/> 
           </TweenOne>
           <TweenOne 
             className="banner-user-text" 
             animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
           >
-          <img src={process.env.PUBLIC_URL + '/images/63.jpg'} style={{width: '100px'}}/> 
+          <img src={process.env.PUBLIC_URL + '/images/63.jpg'} style={{width: '100px'}}     alt=""/> 
             </TweenOne>
         </Element>
         <Element key="bbb"
@@ -134,13 +134,13 @@ class Banner extends React.Component {
             }}
           />
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-          <img src={process.env.PUBLIC_URL + '/images/64.jpg'} style={{width: '100px'}}/> 
+          <img src={process.env.PUBLIC_URL + '/images/64.jpg'} style={{width: '100px'}}      alt=""/> 
           </TweenOne>
           <TweenOne 
             className="banner-user-text" 
             animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
           >
-           <img src={process.env.PUBLIC_URL + '/images/61.jpg'} style={{width: '100px'}}/> 
+           <img src={process.env.PUBLIC_URL + '/images/61.jpg'} style={{width: '100px'}}      alt=""/> 
           </TweenOne>
         </Element>
         <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={TweenOne}

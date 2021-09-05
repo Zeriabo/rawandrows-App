@@ -1,7 +1,5 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from 'react-responsive-carousel';
-import Banner from "../Banner"
 import { Parallax } from 'rc-scroll-anim';
 import { Player } from 'video-react';
 import  MapContainer from "./MyMap";
@@ -50,7 +48,7 @@ const Home = () => {
                   </div>
                   
                   <div class="unit-body">
-                    <h4 class="box-icon-ruby-title"><a href="#">Natural &amp; Organic</a></h4>
+                    <h4 class="box-icon-ruby-title"><a href="organic.com">Natural &amp; Organic</a></h4>
                   </div>
                 </div>
               </article>
@@ -68,7 +66,7 @@ const Home = () => {
                     <div class="box-icon-ruby-icon linearicons-shovel"></div>
                   </div>
                   <div class="unit-body">
-                    <h4 class="box-icon-ruby-title"><a href="#">Best Equipment</a></h4>
+                    <h4 class="box-icon-ruby-title"><a href="organic.com">Best Equipment</a></h4>
                   </div>
                 </div>
               </article>
@@ -87,7 +85,7 @@ const Home = () => {
                     <div class="box-icon-ruby-icon linearicons-sun"></div>
                   </div>
                   <div class="unit-body">
-                    <h4 class="box-icon-ruby-title"><a href="#">Dedicated Team</a></h4>
+                    <h4 class="box-icon-ruby-title"><a href="organic.com">Dedicated Team</a></h4>
                   </div>
                 </div>
               </article>
@@ -145,15 +143,15 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-5-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="organic.com">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Avocados</a></h6>
+                          <h6 class="product-title"><a href="something.com">Avocados</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price product-price-old">$59.00</div>
                             <div class="product-price">$28.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="organic.com">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -172,14 +170,14 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-6-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="organic.com">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Corn</a></h6>
+                          <h6 class="product-title"><a href="something.com">Corn</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price">$27.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="organic.com">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -198,14 +196,14 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-8-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="organic.com">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Artichokes</a></h6>
+                          <h6 class="product-title"><a href="something.com">Artichokes</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price">$23.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="organic.com">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -224,14 +222,14 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-7-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="organic.com">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Broccoli</a></h6>
+                          <h6 class="product-title"><a href="something.com">Broccoli</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price">$25.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="organic.com">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -273,15 +271,15 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-1-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="organic.com">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Peaches</a></h6>
+                          <h6 class="product-title"><a href="organic.com">Peaches</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price product-price-old">$59.00</div>
                             <div class="product-price">$28.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="organic.com">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -294,14 +292,14 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-3-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="organic.com">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Apples</a></h6>
+                          <h6 class="product-title"><a href="organic.com">Apples</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price">$21.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="organic.com">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -314,14 +312,14 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-4-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="https://rawrows.netlify.app/">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Kiwis</a></h6>
+                          <h6 class="product-title"><a href="https://rawrows.netlify.app/">Kiwis</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price">$26.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="https://rawrows.netlify.app/">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -334,14 +332,14 @@ const Home = () => {
                       <div class="unit flex-row flex-lg-column">
                         <div class="unit-left">
                           <div class="product-figure"><img src="images/product-2-270x280.png" alt="" width="270" height="280"/>
-                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="#">Add to cart</a></div>
+                            <div class="product-button"><a class="button button-md button-white button-ujarak" href="https://rawrows.netlify.app/">Add to cart</a></div>
                           </div>
                         </div>
                         <div class="unit-body">
-                          <h6 class="product-title"><a href="#">Blueberries</a></h6>
+                          <h6 class="product-title"><a href="https://rawrows.netlify.app/">Blueberries</a></h6>
                           <div class="product-price-wrap">
                             <div class="product-price">$23.00</div>
-                          </div><a class="button button-sm button-secondary button-ujarak" href="#">Add to cart</a>
+                          </div><a class="button button-sm button-secondary button-ujarak" href="https://rawrows.netlify.app/">Add to cart</a>
                         </div>
                       </div>
                     </article>
@@ -364,27 +362,27 @@ const Home = () => {
           <div class="row row-30 justify-content-center">
             <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInRight" data-wow-delay="0s">
          
-              <article class="team-classic"><a class="team-classic-figure" href="#"><img src="images/team-1-370x406.jpg" alt="" width="370" height="406"/></a>
+              <article class="team-classic"><a class="team-classic-figure" href="https://rawrows.netlify.app/"><img src="images/team-1-370x406.jpg" alt="" width="370" height="406"/></a>
                 <div class="team-classic-caption">
-                  <h5 class="team-classic-name"><a href="#">Ryan Wilson</a></h5>
+                  <h5 class="team-classic-name"><a href="https://rawrows.netlify.app/">Ryan Wilson</a></h5>
                   <p class="team-classic-status">Founder</p>
                 </div>
               </article>
             </div>
             <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInRight" data-wow-delay=".1s">
   
-              <article class="team-classic"><a class="team-classic-figure" href="#"><img src="images/team-2-370x406.jpg" alt="" width="370" height="406"/></a>
+              <article class="team-classic"><a class="team-classic-figure" href="https://rawrows.netlify.app/"><img src="images/team-2-370x406.jpg" alt="" width="370" height="406"/></a>
                 <div class="team-classic-caption">
-                  <h5 class="team-classic-name"><a href="#">Jill Peterson</a></h5>
+                  <h5 class="team-classic-name"><a href="https://rawrows.netlify.app/">Jill Peterson</a></h5>
                   <p class="team-classic-status">Garden Manager</p>
                 </div>
               </article>
             </div>
             <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInRight" data-wow-delay=".2s">
             
-              <article class="team-classic"><a class="team-classic-figure" href="#"><img src="images/team-3-370x406.jpg" alt="" width="370" height="406"/></a>
+              <article class="team-classic"><a class="team-classic-figure" href="https://rawrows.netlify.app/"><img src="images/team-3-370x406.jpg" alt="" width="370" height="406"/></a>
                 <div class="team-classic-caption">
-                  <h5 class="team-classic-name"><a href="#">Sam Robinson</a></h5>
+                  <h5 class="team-classic-name"><a href="https://rawrows.netlify.app/">Sam Robinson</a></h5>
                   <p class="team-classic-status">Farmyard Coordinator</p>
                 </div>
               </article>
@@ -407,7 +405,7 @@ const Home = () => {
                   <div class="thumbnail-mary-figure"><img src="images/grid-gallery-1-370x303.jpg" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-original-1-1200x800.jpg" data-lightgallery="item"><img src="images/grid-gallery-1-370x303.jpg" alt="" width="370" height="303"/></a>
-                    <h4 class="thumbnail-mary-title"><a href="#">Watermelons</a></h4>
+                    <h4 class="thumbnail-mary-title"><a href="https://rawrows.netlify.app/">Watermelons</a></h4>
                   </div>
                 </article>
               </div>
@@ -419,7 +417,7 @@ const Home = () => {
                   <div class="thumbnail-mary-figure"><img src="images/grid-gallery-2-370x303.jpg" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-original-2-1200x800.jpg" data-lightgallery="item"><img src="images/grid-gallery-2-370x303.jpg" alt="" width="370" height="303"/></a>
-                    <h4 class="thumbnail-mary-title"><a href="#">Grapes</a></h4>
+                    <h4 class="thumbnail-mary-title"><a href="https://rawrows.netlify.app/">Grapes</a></h4>
                   </div>
                 </article>
               </div>
@@ -431,7 +429,7 @@ const Home = () => {
                   <div class="thumbnail-mary-figure"><img src="images/grid-gallery-3-370x303.jpg" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-original-3-800x1200.jpg" data-lightgallery="item"><img src="images/grid-gallery-3-370x303.jpg" alt="" width="370" height="303"/></a>
-                    <h4 class="thumbnail-mary-title"><a href="#">Mandarin Oranges</a></h4>
+                    <h4 class="thumbnail-mary-title"><a href="https://rawrows.netlify.app/">Mandarin Oranges</a></h4>
                   </div>
                 </article>
               </div>
@@ -443,7 +441,7 @@ const Home = () => {
                   <div class="thumbnail-mary-figure"><img src="images/grid-gallery-4-370x303.jpg" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-original-4-800x1200.jpg" data-lightgallery="item"><img src="images/grid-gallery-4-370x303.jpg" alt="" width="370" height="303"/></a>
-                    <h4 class="thumbnail-mary-title"><a href="#">Lemons</a></h4>
+                    <h4 class="thumbnail-mary-title"><a href="https://rawrows.netlify.app/">Lemons</a></h4>
                   </div>
                 </article>
               </div>
@@ -455,7 +453,7 @@ const Home = () => {
                   <div class="thumbnail-mary-figure"><img src="images/grid-gallery-5-370x303.jpg" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-original-5-800x1200.jpg" data-lightgallery="item"><img src="images/grid-gallery-5-370x303.jpg" alt="" width="370" height="303"/></a>
-                    <h4 class="thumbnail-mary-title"><a href="#">Organic Food</a></h4>
+                    <h4 class="thumbnail-mary-title"><a href="https://rawrows.netlify.app/">Organic Food</a></h4>
                   </div>
                 </article>
               </div>
@@ -467,7 +465,7 @@ const Home = () => {
                   <div class="thumbnail-mary-figure"><img src="images/grid-gallery-6-370x303.jpg" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-original-6-1200x800.jpg" data-lightgallery="item"><img src="images/grid-gallery-6-370x303.jpg" alt="" width="370" height="303"/></a>
-                    <h4 class="thumbnail-mary-title"><a href="#">Salad</a></h4>
+                    <h4 class="thumbnail-mary-title"><a href="https://rawrows.netlify.app/">Salad</a></h4>
                   </div>
                 </article>
               </div>
@@ -537,7 +535,7 @@ const Home = () => {
               <div class="col-sm-6 col-lg-4 col-xl-3">
                 <div class="oh-desktop">
                   <div class="wow slideInRight" data-wow-delay="0s">
-                    <div class="footer-brand"><a href="#"><img src="images/logo.jpg" alt="" width="151" height="35"/></a></div>
+                    <div class="footer-brand"><a href="something.com"><img src="images/logo.jpg" alt="" width="151" height="35"/></a></div>
                     <p>Raw and Rows is an organic farm located in Dubai. We offer healthy foods and products to our clients.</p>
                     <ul class="footer-contacts d-inline-block d-md-block">
                       <li>
@@ -557,7 +555,7 @@ const Home = () => {
                       <li>
                         <div class="unit unit-spacing-xs">
                           <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                          <div class="unit-body"><a class="link-location" href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
+                          <div class="unit-body"><a class="link-location" href="something.com">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
                         </div>
                       </li>
                     </ul>
@@ -580,10 +578,11 @@ const Home = () => {
                       <p class="text-white">Follow Us</p>
                       <div>
                         <ul class="list-inline list-inline-sm footer-social-list-2">
-                          <li><a class="icon fa fa-facebook" href="#"></a></li>
-                          <li><a class="icon fa fa-twitter" href="#"></a></li>
-                          <li><a class="icon fa fa-google-plus" href="#"></a></li>
-                          <li><a class="icon fa fa-instagram" href="#"></a></li>
+                         
+                          <li><a class="icon fa fa-facebook" href="https://rawrows.netlify.app/">something</a></li>
+                          <li><a class="icon fa fa-twitter" href="https://rawrows.netlify.app/">something</a></li>
+                          <li><a class="icon fa fa-google-plus" href="https://rawrows.netlify.app/">something</a></li>
+                          <li><a class="icon fa fa-instagram" href="https://rawrows.netlify.app/">something</a></li>
                         </ul>
                       </div>
                     </div>

@@ -3,13 +3,8 @@ import './App.scss';
 import NavBar from "./Components/NavBar"
 import Services from "./Components/Services";
 import MedicalEquipment from "./Components/MedicalEquipments";
-import Contactus from "./Components/ContactUs";
 import Home from './Components/Home';
-import Intro from './Components/Intro';
 import AboutUs from './Components/AboutUs';
-import Animate from 'rc-animate';
-import { Parallax } from 'rc-scroll-anim';
-import { Link } from 'react-scroll';
 import {
   BrowserRouter as Router,
   Switch,
