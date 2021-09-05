@@ -84,14 +84,14 @@ const NavBar = () => {
 
     <div class="d-flex align-items-center">
 
-      <a class="text-reset me-3" href="#">
+      <a class="text-reset me-3" href="http://localhost:5000">
         <i class="fas fa-shopping-cart"></i>
       </a>
 
      
       <a
         class="text-reset me-3 dropdown-toggle hidden-arrow"
-        href="#"
+        href="http://localhost:5000 "
         id="navbarDropdownMenuLink"
         role="button"
         data-mdb-toggle="dropdown"
@@ -105,20 +105,20 @@ const NavBar = () => {
         aria-labelledby="navbarDropdownMenuLink"
       >
         <li>
-          <a class="dropdown-item" href="#">Some news</a>
+          <a class="dropdown-item" href="http://localhost:5000 ">Some news</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">Another news</a>
+          <a class="dropdown-item" href="http://localhost:5000 ">Another news</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="http://localhost:5000 ">Something else here</a>
         </li>
       </ul>
 
    
       <a
         class="dropdown-toggle d-flex align-items-center hidden-arrow"
-        href="#"
+        href="http://localhost:5000 "
         id="navbarDropdownMenuLink"
         role="button"
         data-mdb-toggle="dropdown"
@@ -138,13 +138,13 @@ const NavBar = () => {
         aria-labelledby="navbarDropdownMenuLink"
       >
         <li>
-          <a class="dropdown-item" href="#">My profile</a>
+          <a class="dropdown-item" href="http://localhost:5000 ">My profile</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="http://localhost:5000 ">Settings</a>
         </li>
         <li>
-          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" href="http://localhost:5000 ">Logout</a>
         </li>
       </ul>
     </div>
