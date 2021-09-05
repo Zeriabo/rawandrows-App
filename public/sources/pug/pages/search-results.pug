@@ -1,0 +1,209 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Search Results'
+
+block page 
+  // Page Header
+  // Page Header
+  header.section.page-header
+    // RD Navbar
+    .rd-navbar-wrap.rd-navbar-modern-wrap
+      nav.rd-navbar.rd-navbar-modern(
+      data-layout=                'rd-navbar-fixed'
+      data-sm-layout=             'rd-navbar-fixed'
+      data-md-layout=             'rd-navbar-fixed'
+      data-md-device-layout=      'rd-navbar-fixed'
+      data-lg-layout=             'rd-navbar-static'
+      data-lg-device-layout=      'rd-navbar-fixed'
+      data-xl-layout=             'rd-navbar-static'
+      data-xl-device-layout=      'rd-navbar-static'
+      data-xxl-layout=            'rd-navbar-static'
+      data-xxl-device-layout=     'rd-navbar-static'
+      data-lg-stick-up-offset=    '46px'
+      data-xl-stick-up-offset=    '46px'
+      data-xxl-stick-up-offset=   '70px'
+      data-lg-stick-up=           'true'
+      data-xl-stick-up=           'true'
+      data-xxl-stick-up=          'true')
+        .rd-navbar-main-outer: .rd-navbar-main
+          // RD Navbar Panel
+          .rd-navbar-panel
+            // RD Navbar Toggle
+            button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+            // RD Navbar Brand
+            .rd-navbar-brand: a.brand(href='index.html'): +png(logo.default)
+
+          .rd-navbar-main-element
+            .rd-navbar-nav-wrap
+              // RD Navbar Basket
+              include ../sections/_header-cart
+              a(href='cart-page.html').rd-navbar-basket.rd-navbar-basket-mobile.fl-bigmug-line-shopping198: span 2
+              // RD Navbar Search
+              .rd-navbar-search
+                button.rd-navbar-search-toggle(data-rd-navbar-toggle='.rd-navbar-search'): span
+                form.rd-search(action='search-results.html' data-search-live='rd-search-results-live' method='GET')
+                  .form-wrap
+                    label.form-label(for='rd-navbar-search-form-input') Search...
+                    input(class='rd-navbar-search-form-input form-input' id='rd-navbar-search-form-input' type='text' name='s' autocomplete="off")
+                    #rd-search-results-live.rd-search-results-live
+                    button.rd-search-form-submit.fl-bigmug-line-search74(type='submit')
+
+              ul.rd-navbar-nav
+                li.rd-nav-item: a.rd-nav-link(href='index.html#home') Home
+                li.rd-nav-item: a.rd-nav-link(href='index.html#products') Products
+                li.rd-nav-item: a.rd-nav-link(href='index.html#team') Team
+                li.rd-nav-item: a.rd-nav-link(href='index.html#testimonials') Testimonials
+                li.rd-nav-item: a.rd-nav-link(href='index.html#gallery') Gallery
+                li.rd-nav-item: a.rd-nav-link(href='index.html#contacts-us') Contact Us
+
+            .rd-navbar-project-hamburger( data-multitoggle='.rd-navbar-main', data-multitoggle-blur='.rd-navbar-wrap', data-multitoggle-isolate )
+              .project-hamburger
+                span.project-hamburger-arrow-top
+                span.project-hamburger-arrow-center
+                span.project-hamburger-arrow-bottom
+              .project-hamburger-2
+                - for (var i = 0; i < 3 ; i++)
+                 span.project-hamburger-arrow
+              .project-close
+                span
+                span
+
+          .rd-navbar-project.rd-navbar-modern-project
+            .rd-navbar-project-modern-header
+              h4.rd-navbar-project-modern-title Get in Touch
+              .rd-navbar-project-hamburger( data-multitoggle='.rd-navbar-main', data-multitoggle-blur='.rd-navbar-wrap', data-multitoggle-isolate )
+                .project-close
+                  span
+                  span
+
+            .rd-navbar-project-content.rd-navbar-modern-project-content: div
+              p We are always ready to provide you with fresh organic products for your home or office. Contact us to find out how we can help you.
+              .heading-6.subtitle Our Contacts
+              .row.row-10.gutters-10
+                .col-12
+                  +jpg('home-sidebar-394x255')
+
+              ul.rd-navbar-modern-contacts
+                li: .unit.unit-spacing-sm
+                  .unit-left: span.icon.fa.fa-phone
+                  .unit-body: a.link-phone(href='tel:#') +1 323-913-4688
+                li: .unit.unit-spacing-sm
+                  .unit-left: span.icon.fa.fa-location-arrow
+                  .unit-body: a.link-location(href='#') 4730 Crystal Springs Dr, Los Angeles, CA 90027
+                li: .unit.unit-spacing-sm
+                  .unit-left: span.icon.fa.fa-envelope
+                  .unit-body: a.link-email(href='mailto:#') mail@demolink.org
+              ul.list-inline.rd-navbar-modern-list-social
+                li: a(href='#' class='icon fa fa-facebook')
+                li: a(href='#' class='icon fa fa-twitter')
+                li: a(href='#' class='icon fa fa-google-plus')
+                li: a(href='#' class='icon fa fa-instagram')
+                li: a(href='#' class='icon fa fa-pinterest')
+
+
+  +breadcrumbs({
+    category: activeCategory,
+    path: [pageName],
+    mod: 'bg-overlay-39',
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Search results
+  section.section.section-xl.bg-default
+    .container
+      .row.justify-content-center
+        .col-lg-9
+          // RD Search
+          form.rd-form.rd-search.rd-form-inline(action='search-results.html' method='GET')
+            .form-wrap
+              label.form-label(for='rd-search-form-input') Search
+              input.form-input(id='rd-search-form-input' type='text' name='s' autocomplete='off')
+            .form-wrap.form-button
+              button.button.button-primary(type='submit') Search
+
+          .rd-search-results
+
+  // Page Footer
+  footer.section.footer-variant-2.footer-modern.context-dark.section-top-image.section-top-image-dark#contacts-us(data-type='anchor')
+    .footer-variant-2-content: .container
+      .row.row-40.justify-content-between
+        .col-sm-6.col-lg-4.col-xl-3: .oh-desktop: .wow.slideInRight(data-wow-delay='0s')
+          .footer-brand: a(href='#'): +png(logo.inverse)
+          p GreenDay is an organic farm located in California. We offer healthy foods and products to our clients.
+          ul.footer-contacts.d-inline-block.d-md-block
+            li: .unit.unit-spacing-xs
+              .unit-left: span.icon.fa.fa-phone
+              .unit-body: a.link-phone(href='tel:#') +1 323-913-4688
+            li: .unit.unit-spacing-xs
+              .unit-left: span.icon.fa.fa-clock-o
+              .unit-body: p Mon-Sat: 07:00AM - 05:00PM
+            li: .unit.unit-spacing-xs
+              .unit-left: span.icon.fa.fa-location-arrow
+              .unit-body: a.link-location(href='#') 4730 Crystal Springs Dr, Los Angeles, CA 90027
+
+        .col-sm-6.col-lg-4.col-xl-4: .oh-desktop: .inset-top-18.wow.slideInDown(data-wow-delay='0s')
+          h5 Newsletter
+          p Join our email newsletter for news and tips.
+          form.rd-form.rd-mailform(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input.form-input(id='subscribe-form-5-email' type='email' name='email' data-constraints='@Email @Required')
+              label.form-label(for='subscribe-form-5-email') Enter Your E-mail
+            button.button.button-block.button-white(type='submit') Subscribe
+
+          .group-lg.group-middle
+            p.text-white Follow Us
+            div: +widget-list([], '', 'list-inline-sm footer-social-list-2')
+
+        .col-lg-3.col-xl-3: .oh-desktop: .inset-top-18.wow.slideInLeft(data-wow-delay='0s')
+          h5 Gallery
+          .row.row-10.gutters-10
+            .col-6.col-sm-3.col-lg-6
+              +thumbnail-mary({
+                titleNone: true,
+                className: 'thumbnail-xxs thumbnail-mary-2',
+                nameImg: 'gallery-image',
+                numberImg: '1',
+                sizeImg: '129x120',
+                nameImgOriginal: 'gallery-original-7-800x1200'
+              })
+            .col-6.col-sm-3.col-lg-6
+              +thumbnail-mary({
+                titleNone: true,
+                className: 'thumbnail-xxs thumbnail-mary-2',
+                nameImg: 'gallery-image',
+                numberImg: '2',
+                sizeImg: '129x120',
+                nameImgOriginal: 'gallery-original-8-1200x800'
+              })
+            .col-6.col-sm-3.col-lg-6
+              +thumbnail-mary({
+                titleNone: true,
+                className: 'thumbnail-xxs thumbnail-mary-2',
+                nameImg: 'gallery-image',
+                numberImg: '3',
+                sizeImg: '129x120',
+                nameImgOriginal: 'gallery-original-9-800x1200'
+              })
+            .col-6.col-sm-3.col-lg-6
+              +thumbnail-mary({
+                titleNone: true,
+                className: 'thumbnail-xxs thumbnail-mary-2',
+                nameImg: 'gallery-image',
+                numberImg: '4',
+                sizeImg: '129x120',
+                nameImgOriginal: 'gallery-original-10-1200x800'
+              })
+
+    .footer-variant-2-bottom-panel: .container
+      // Rights
+      .group-sm.group-sm-justify
+        p.rights
+          span &copy;&nbsp;
+          span.copyright-year
+          = ' '
+          span= logo.name
+          = '. All rights reserved'
+          | . Design&nbsp;by&nbsp;#[a(href="https://zemez.io/") Zemez]

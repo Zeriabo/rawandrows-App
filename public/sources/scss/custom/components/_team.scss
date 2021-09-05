@@ -1,0 +1,263 @@
+/*
+*
+* Team
+*/
+
+//
+// Table of Contents: 
+//
+// Team Classic
+// Team Modern
+// Team Creative
+// Team Nikki
+// Clients Classic
+// Clients Modern
+//
+
+//
+// Team Classic
+//
+
+.team-classic {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-classic-2 {
+  .team-classic-status {color: $secondary;}
+}
+
+.team-classic-figure {
+  display: block;
+
+  img {
+    width: 100%;
+    transition: all .3s ease;
+  }
+}
+
+.team-classic-caption {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  bottom: 27px;
+  width: 80%;
+  min-width: 300px;
+  margin-left: -25px;
+  padding: 15px 20px 15px 50px;
+  transition: all .3s ease;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($gray-900, .5);
+    transform: skew(10deg);
+    transform-origin: 50% 100%;
+    z-index: -1;
+  }
+}
+
+.team-classic-name {
+  color: $white;
+
+  a {
+    @include link(inherit, $secondary);
+  }
+}
+
+.team-classic-status {
+  line-height: 1.5;
+  color: rgba($white, .6);
+  letter-spacing: .025em;
+}
+
+* + .team-classic-status { margin-top: 0; }
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+  .team-classic-lg {
+    max-width: 420px;
+
+    .team-classic-caption {
+      bottom: 44px;
+      margin-left: -30px;
+      padding: 15px 20px 15px 85px;
+    }
+  }
+}
+
+.desktop {
+  // Large ≥992px
+  @include media-breakpoint-up(lg) {
+    .team-classic:hover {
+      .team-classic-figure img {
+        filter: grayscale(0);
+      }
+
+      .team-classic-caption {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+  .team-classic-lg {
+    .team-classic-caption {
+      bottom: 10%;
+      padding: 15px 6% 15px 18%;
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .team-classic-lg {
+    .team-classic-caption {
+      min-width: 260px;
+    }
+  }
+}
+
+
+//
+// Clients Modern
+//
+.clients-modern {
+  position: relative;
+  display: block;
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  background: $white;
+  border: 1px solid $gray-200;
+  transition: all .3s ease-in-out;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    transition: color .1s ease, transform .3s ease;
+    will-change: transform;
+  }
+
+  &::before {	transform: scaleX(0); }
+  &::after { transform: scaleY(0); }
+
+  img {
+    width: 100%;
+    opacity: .5;
+  }
+}
+
+.desktop {
+  // Large ≥992px
+  @include media-breakpoint-up(lg) {
+
+    .clients-modern img {
+      will-change: transform;
+      transition: all .3s ease;
+    }
+
+    .clients-modern:hover {
+      border-color: transparent;
+
+      &::before,
+      &::after { transform: none; }
+
+      &::before {
+        border-color: $primary transparent $primary transparent;
+      }
+
+      &::after {
+        border-color: transparent $primary transparent $primary;
+      }
+
+      img {
+        opacity: 1;
+        transform: scale(.9);
+      }
+    }
+  }
+}
+
+
+
+//
+// Clients Creative
+//
+.clients-creative {
+  position: relative;
+  display: block;
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all .3s ease-in-out;
+
+  img {
+    width: 100%;
+    opacity: .3;
+  }
+}
+
+.clients-creative-2,
+.clients-creative-3 {
+  img { opacity: .5; }
+}
+
+.clients-creative-3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.desktop {
+  // Large ≥992px
+  @include media-breakpoint-up(lg) {
+
+    .clients-creative img {
+      will-change: transform;
+      transition: all .3s ease;
+    }
+
+    .clients-creative:hover {
+      border-color: $gray-800;
+
+      img {
+        opacity: .5;
+        transform: translate3d(0, -10px, 0);
+      }
+    }
+
+    .clients-creative-2:hover {
+      img { opacity: .7; }
+    }
+
+    .clients-creative-3:hover {
+      img { opacity: 1; }
+    }
+  }
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+  .clients-creative-3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,5 +1,5 @@
 
-import './App.css';
+import './App.scss';
 import NavBar from "./Components/NavBar"
 import Services from "./Components/Services";
 import MedicalEquipment from "./Components/MedicalEquipments";
@@ -7,7 +7,9 @@ import Contactus from "./Components/ContactUs";
 import Home from './Components/Home';
 import Intro from './Components/Intro';
 import AboutUs from './Components/AboutUs';
-import Footer from './Components/Footer';
+import Animate from 'rc-animate';
+import { Parallax } from 'rc-scroll-anim';
+import { Link } from 'react-scroll';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,22 +17,25 @@ import {
  
 } from "react-router-dom";
 function App() {
+  
   return (
     <div className="App">
  <Router>
    
         <NavBar />
-        <br />
+      
         <Switch>
         <Route exact path='/' component={Home} />
         <Route path="/Home" component={Home}>
-
+        <br />
+       
+        <br />
            <Home />
              
-                <Intro />
+            
           </Route>
    
-          <Route path="/Services" component={Services}>
+          <Route path="/Services" >
               <Services />
           </Route>
           <Route path="/MedicalEquipments" component={MedicalEquipment}>
@@ -39,14 +44,13 @@ function App() {
           <Route path="/AboutUs" component={AboutUs}>
             <AboutUs />
           </Route>
-          <Route path="/ContactUs" component={Contactus}>
-            <Contactus />
-          </Route>
+     
        
         </Switch>
+        
     </Router>
 
-    <Footer />
+  
     </div>
     
   );

@@ -1,0 +1,26 @@
+/*
+*
+* Images
+*/
+
+// Standard img style
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.img-circles {
+  border-radius: 50%;
+}
+
+.img-custom {
+  @include media-breakpoint-up(xl) {
+    margin-left: -70px;
+    margin-right: -50px;
+  }
+}

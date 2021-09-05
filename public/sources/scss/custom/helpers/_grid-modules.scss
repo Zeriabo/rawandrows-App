@@ -1,0 +1,63 @@
+/*
+*
+* Grid modules
+*/
+
+//
+// Grid demonstration
+//
+.grid-demonstration {
+	text-align: left;
+
+	@include media-breakpoint-down(xl) {
+
+		p {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+.grid-demonstration-fullwidth {
+	line-height: 1.86;
+
+	* + p {	margin-top: 12px; }
+}
+
+.grid-demonstration-boxed {
+	line-height: 1.8;
+
+	* + p {	margin-top: 22px; }
+}
+
+// Custom Grid
+//
+// Change $enable-grid-classes-custom: true
+// that would generate custom grid (example: 10 columns)
+
+$enable-grid-classes-custom: false;
+
+@mixin make-grid-columns-custom($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+	@each $breakpoint in map-keys($breakpoints) {
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			@for $i from 1 through $columns {
+				.col#{$infix}-#{$i} {
+					@include make-col($i, $columns);
+				}
+			}
+		}
+	}
+}
+
+@if $enable-grid-classes-custom {
+	.row-ten {
+		@include make-grid-columns-custom(10);
+	}
+
+	.row-xl-ten {
+		@include make-grid-columns-custom(10, 30px, (xl: map-get($grid-breakpoints, xl), xlg: map-get($grid-breakpoints, xlg), xxl: map-get($grid-breakpoints, xxl)));
+	}
+}

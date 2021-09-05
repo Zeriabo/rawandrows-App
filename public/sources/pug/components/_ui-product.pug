@@ -1,0 +1,37 @@
+mixin product(obj)
+  // Product
+  article.product(class=obj.mod)&attributes(attributes)
+    .product-figure
+      +png(obj.img)
+      .product-button
+        a.button.button-md.button-white.button-ujarak(href='#') Add to cart
+    h5.product-title: a(href='#')=obj.title
+    .product-price-wrap
+      if(obj.priceOld)
+        .product-price.product-price-old= '$' + obj.priceOld + '.00'
+      .product-price= '$' + obj.price + '.00'
+
+mixin product-2(obj)
+  // Product
+  article.product.product-2(class=obj.mod)&attributes(attributes)
+    .unit(class=obj.unit)
+      .unit-left: .product-figure
+        +png(obj.img)
+        .product-button
+          a.button.button-md.button-white.button-ujarak(href='#') Add to cart
+      .unit-body
+        h6.product-title: a(href='#')=obj.title
+        .product-price-wrap
+          if(obj.priceOld)
+            .product-price.product-price-old= '$' + obj.priceOld + '.00'
+          .product-price= '$' + obj.price + '.00'
+        a.button.button-sm.button-secondary.button-ujarak(href='#') Add to cart
+
+mixin product-minimal(obj)
+  // Product Minimal
+  article.product-minimal.unit.unit-spacing-md(class=obj.mod)
+    .unit-left
+      a.product-minimal-figure(href='#'): +png(obj.img)
+    .unit-body
+      h6.product-minimal-title: a(href='#')=obj.title
+      .product-minimal-price= '$' + obj.price + '.00'

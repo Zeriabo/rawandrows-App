@@ -1,0 +1,183 @@
+/*
+*
+* Contexts
+*/
+
+@mixin context-dark {
+	&,
+	#{headings()} {
+		color: $white;
+	}
+
+	.big {
+		color: rgba($white, .6);
+	}
+
+	.form-wrap.has-error .form-input {
+		border-color: transparent;
+	}
+
+	.form-input,
+	.form-label,
+	.form-validation { color: $white; }
+
+	.form-input {
+		background: rgba($white, .34);
+		border-color: transparent;
+	}
+
+	.rights {
+		color: $white;
+
+		a {
+			@include link(inherit, $secondary)
+		}
+	}
+
+	.button.button-pipaluk {
+		&::after {
+			border-color: $white;
+		}
+
+		&:hover,
+		&:active {
+			color: $white;
+		}
+	}
+
+	.button.button-ujarak:not([class*='button-secondary']) {
+		&::before { background: $secondary;	}
+
+		&:hover,
+		&:active { border-color: $secondary; }
+	}
+
+	.button-secondary.button-ujarak {
+		&::before { background: $primary;	}
+
+		&:hover,
+		&:active { border-color: $primary; }
+	}
+
+
+
+	// Footer
+	&.footer-variant-2 {
+		color: rgba($white, .3);
+
+		.rights {	color: rgba($white, .3); }
+
+		.button.button-ujarak {
+			&::before {
+				background: $white;
+			}
+
+			&:hover,
+			&:active {
+				color: $secondary;
+				border-color: $white;
+			}
+		}
+	}
+
+	&.footer-modern {
+		.form-input { background: rgba($white, .1); }
+	}
+
+	.footer-contacts {
+		border-top-color: rgba($white, .2);
+
+		.icon { color: rgba($white, .2); }
+		p { color: $white; }
+
+		a {
+			@include link($white, $secondary);
+		}
+	}
+
+	.footer-link-list {
+		a {
+			@include link(inherit, $primary);
+		}
+	}
+
+	.footer-social-list-2 {
+		a {
+			@include link($white, $secondary);
+		}
+	}
+
+	&.footer-minimal,
+	&.footer-corporate {
+		.footer-minimal-bottom-panel,
+		.footer-corporate-bottom-panel {
+			color: rgba($white, .3);
+
+			a {
+				@include link(inherit, $primary);
+			}
+		}
+
+		.rights {
+			color: inherit;
+		}
+
+		.button-gray-31.button-ujarak {
+			&::before {
+				background: $primary;
+			}
+
+			&:hover,
+			&:active {
+				color: $white;
+				border-color: $primary;
+			}
+		}
+	}
+
+	&.footer-corporate-2 {
+		.footer-contacts {
+			.icon { color: $primary; }
+		}
+
+		.button-gray-31.button-ujarak {
+			&::before {
+				background: $secondary;
+			}
+
+			&:hover,
+			&:active {
+				border-color: $secondary;
+			}
+		}
+	}
+
+	// Posts
+	.post-minimal-2-time {
+		color: rgba($white, .25)
+	}
+
+	// Video
+	.video-modern-subtitle { color: $primary;	}
+	
+	// Decor
+	.title-decoration-lines-left {
+		&::before {
+			background: $secondary;
+		}
+	}
+
+	// Text
+	.text-gray-500 {
+		color: rgba($white, .3);
+	}
+}
+
+@mixin context-light {
+	color: $body-color;
+
+	#{headings()} {
+		color: $headings-color;
+	}
+}
+

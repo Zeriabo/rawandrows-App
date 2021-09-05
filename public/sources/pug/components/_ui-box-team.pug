@@ -1,0 +1,9 @@
+//- Team
+
+mixin team-classic(obj)
+  // Team Classic
+  article.team-classic(class=obj.mod)
+    a.team-classic-figure(href='#'): +jpg(obj.img)
+    .team-classic-caption
+      h5.team-classic-name: a(href='#')=obj.name
+      p.team-classic-status=obj.status

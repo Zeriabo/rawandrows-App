@@ -1,0 +1,358 @@
+/*
+*
+* Counter
+*/
+
+//
+// Table of Contents:
+//
+// Counter Creative
+// Counter Classic
+// Counter Abby
+// Counter Amy
+// Box Counter
+//
+
+
+//
+// Counter Classic
+//
+
+.counter-classic {
+  text-align: center;
+}
+
+.counter-classic-number {
+  font-size: 70px;
+  line-height: 0.8;
+  font-weight: 300;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+  font-family: $font-family-sec;
+
+  > * {
+    display: inline-block;
+  }
+
+  .symbol {
+    font-size: 40px;
+    letter-spacing: 0;
+  }
+}
+
+.counter-classic-title {
+  font-weight: 400;
+  letter-spacing: .05em;
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+  .counter-classic-number {
+    font-size: 110px;
+
+    .symbol { font-size: 70px; }
+  }
+}
+
+
+
+//
+// Counter Creative
+//
+
+.counter-creative {
+  text-align: center;
+}
+
+.counter-creative-number {
+  font-size: 70px;
+  line-height: .8;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+
+  > * {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.counter-creative-icon {
+  margin-left: 10px;
+  font-size: 42px;
+  line-height: 1;
+  color: $white;
+}
+
+.counter-creative-title {
+  font-weight: 300;
+  letter-spacing: .01em;
+}
+
+* + .counter-creative-title { margin-top: 18px; }
+
+
+
+//
+// Counter Abby
+//
+
+.counter-abby {
+  position: relative;
+  padding: 40px 20px;
+  min-height: 100%;
+  border: 9px solid transparent;
+  transition: all .3s ease;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    border: 1px solid $gray-800;
+    transition: inherit;
+    will-change: transform;
+    z-index: -1;
+  }
+  
+  &::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  &::after {
+    top: -9px;
+    right: -9px;
+    bottom: -9px;
+    left: -9px;
+  }
+}
+
+.counter-abby:hover {
+
+  border-color: $gray-800;
+
+  &::before {
+    transform: scale(0.95);
+  }
+
+  &::after {
+    transform: scale(1.05);
+  }
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+  .counter-abby {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+%context-dark {
+
+  .counter-abby {
+
+    &::before,
+    &::after {
+      border-color: rgba($white, .27);
+    }
+  }
+
+  .counter-abby:hover {
+    border-color: rgba($white, .27);
+  }
+}
+
+
+
+//
+// Counter Amy
+//
+
+.counter-amy {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.counter-amy-number {
+  font-size: 110px;
+  line-height: 0.8;
+  font-weight: 300;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-family: $font-family-sec;
+
+  > * {
+    display: inline-block;
+  }
+
+  .symbol {
+    font-size: 70px;
+    letter-spacing: 0;
+    margin-left: -8px;
+  }
+}
+
+.counter-amy-title {
+  font-weight: 400;
+  letter-spacing: .1em;
+  color: $gray-500;
+}
+
+* + .counter-amy-title { margin-top: 4px; }
+
+
+//
+// Bordered Classic
+//
+
+.border-classic {
+
+  > div {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: none;
+      content: '';
+      left: 50%;
+      top: -25px;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 1px;
+      background: $gray-200;
+    }
+  }
+
+  // Small <576px
+  @include media-breakpoint-down(xs) {
+    > div + div {
+      &::before {
+        display: inline-block;
+      }
+    }
+  }
+  
+  // Medium ≥576px
+  @include media-breakpoint-up(sm) {
+
+    > div {
+      position: relative;
+
+      &::before {
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 68px;
+        margin-top: -34px;
+        transform: none;
+      }
+    }
+
+    > div:nth-child(odd) + div {
+
+      &::before {
+        display: inline-block;
+      }
+    }
+  }
+
+  // Large ≥992px
+  @include media-breakpoint-up(lg) {
+
+    > div + div {
+      &::before {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.border-classic-big {
+
+  // Medium ≥576px
+  @include media-breakpoint-up(sm) {
+    > div {
+
+      &::before {
+        height: 86px;
+        margin-top: -43px;
+      }
+    }
+  }
+}
+
+%context-dark {
+
+  .border-classic {
+    > div {
+      &::before {
+        background: rgba($white, .2);
+      }
+    }
+  }
+}
+
+
+//
+// Bordered Creative
+//
+
+.border-creative {
+  overflow: hidden;
+
+  > div {
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      background: #d1d1d1;
+    }
+
+    &::before {
+      height: 1px;
+      left: 26px;
+      right: 26px;
+      bottom: -1px;
+    }
+
+    &::after {
+      width: 1px;
+      top: 26px;
+      right: -1px;
+      bottom: 26px;
+    }
+  }
+}
+
+* + .border-creative { margin-top: 0; }
+
+
+//
+// Box Counter
+//
+.box-ordered {
+  counter-reset: div;
+
+  .box-ordered-item {
+    &::before {
+      content: counter(div, decimal-leading-zero);
+      counter-increment: div;
+    }
+  }
+}
+
+.box-ordered-2 {
+  counter-reset: div;
+
+  .box-ordered-item {
+    &::before {
+      content: counter(div, decimal);
+      counter-increment: div;
+    }
+  }
+}

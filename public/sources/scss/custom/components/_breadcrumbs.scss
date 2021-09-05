@@ -1,0 +1,91 @@
+/*
+*
+* Breadcrumbs
+*/
+$breadcrumb-padding-vertical: 8px;
+$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-bg: $gray-300;
+$breadcrumb-color: $white;
+$breadcrumb-hover-color: rgba($white, .53);
+$breadcrumb-active-color: rgba($white, .53);
+$breadcrumb-separator: "/";
+
+.breadcrumbs-custom {
+	position: relative;
+	overflow: hidden;
+	padding: 40px 0;
+	text-align: center;
+	background-color: $breadcrumb-bg;
+	z-index: 1;
+}
+
+.breadcrumbs-custom-title {
+	letter-spacing: 0;
+}
+
+.breadcrumbs-custom-path {
+	@include spacingX(30px);
+	font-size: 18px;
+	line-height: 1.33;
+
+	a {
+		display: inline;
+		vertical-align: middle;
+
+		&,
+		&:active,
+		&:focus {
+			color: $breadcrumb-color;
+		}
+	}
+
+	li {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+
+		&::after {
+			content: $breadcrumb-separator;
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			right: -8px;
+			color: rgba($white, .53);
+			transform: translate3d(0, -50%, 0);
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	a:hover {
+		color: $breadcrumb-hover-color;
+	}
+
+	li.active {
+		color: $breadcrumb-active-color;
+	}
+}
+
+* + .breadcrumbs-custom-path { margin-top: 14px; }
+
+@include media-breakpoint-up(sm) {
+
+	* + .breadcrumbs-custom-path { margin-top: 18px; }
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+
+	.breadcrumbs-custom { padding: 142px 0 157px; }
+}
+
+// Mega large ≥1600px
+@include media-breakpoint-up(xxl) {
+
+	.breadcrumbs-custom-inset {
+	}
+}

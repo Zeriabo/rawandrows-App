@@ -1,0 +1,67 @@
+/**
+*
+* RD Navbar Classic
+* =====================================================
+*/
+
+//
+// Sidebar Project
+//
+.rd-navbar-project {
+	@extend %rd-navbar-transition;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: $white;
+	transform: translateX(102%);
+	box-shadow: 0 0 8px 0 rgba($black, 0.37);
+	z-index: 1030;
+}
+
+.rd-navbar-project-content {
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba($secondary, .5);
+		border: none;
+		border-radius: 0;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $gray-100;
+		border: none;
+		border-radius: 0;
+	}
+}
+
+.rd-navbar-main.active {
+	.rd-navbar-project {
+		transform: translateX(0);
+	}
+}
+
+
+.link-instafeed {
+	display: inline-block;
+	font-size: 14px;
+	letter-spacing: .025em;
+	color: $gray-800;
+
+	a {
+		@include link(inherit, $secondary);
+	}
+}
+
+// Mega large ≥1600px
+@include media-breakpoint-up(xxl) {
+	.link-instafeed {
+		font-size: 16px;
+	}
+}

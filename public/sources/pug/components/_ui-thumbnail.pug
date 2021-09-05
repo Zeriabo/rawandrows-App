@@ -1,0 +1,20 @@
+mixin thumbnail-mary(obj)
+  // Thumbnail Classic
+  article.thumbnail.thumbnail-mary(class=obj.mod)&attributes(attributes)
+    .thumbnail-mary-figure: +jpg(obj.nameImg + '-' + obj.numberImg + '-' + obj.sizeImg)
+
+    .thumbnail-mary-caption
+      a.icon.fl-bigmug-line-zoom60(href='images/' + (obj.nameImgOriginal ? obj.nameImgOriginal : obj.nameImg + '-' + (obj.numberImgOriginal ? obj.numberImgOriginal : obj.numberImg)) + '.jpg' data-lightgallery='item')
+        +jpg(obj.nameImg + '-' + obj.numberImg + '-' + obj.sizeImg)
+      if(obj.titleNone == true)
+      else
+        if(obj.thumbnailSmall == true)
+          h5.thumbnail-mary-title: a(href='#')= obj.title
+        else
+          h4.thumbnail-mary-title: a(href='#')= obj.title
+  if(obj.nameProject)
+    .thumbnail-mary-description
+      h5.thumbnail-mary-project: a(href='#')=obj.nameProject
+      span.thumbnail-mary-decor
+      h5.thumbnail-mary-time
+        time(datetime=obj.datetime)=obj.time
